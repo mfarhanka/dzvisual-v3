@@ -138,6 +138,63 @@ $structuredData = [
             </div>
         </section>
 
+        <?php if (!empty($service['projects'])): ?>
+            <section class="section-pad bg-soft">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="eyebrow">Website projects</span>
+                        <h2>Selected website and programming work.</h2>
+                    </div>
+                    <div class="row g-4">
+                        <?php foreach ($service['projects'] as $project): ?>
+                            <div class="col-md-6 col-xl-3">
+                                <article class="work-card h-100">
+                                    <a href="<?php echo htmlspecialchars($project['url']); ?>" target="_blank" rel="noopener">
+                                        <img src="<?php echo $assetBase . htmlspecialchars($project['image']); ?>" alt="<?php echo htmlspecialchars($project['label']); ?>" width="640" height="360">
+                                        <div class="work-card-body">
+                                            <span><?php echo htmlspecialchars($project['category']); ?></span>
+                                            <h3><?php echo htmlspecialchars($project['label']); ?></h3>
+                                            <p><?php echo htmlspecialchars($project['copy']); ?></p>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <?php if (!empty($service['packages'])): ?>
+            <section class="section-pad">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="eyebrow">Service packages</span>
+                        <h2>Website packages with practical starting prices.</h2>
+                    </div>
+                    <div class="row g-4">
+                        <?php foreach ($service['packages'] as $package): ?>
+                            <div class="col-md-6 col-xl-4">
+                                <article class="package-card h-100">
+                                    <div>
+                                        <span><?php echo htmlspecialchars($package['name']); ?></span>
+                                        <strong>From <?php echo htmlspecialchars($package['price']); ?></strong>
+                                        <p><?php echo htmlspecialchars($package['summary']); ?></p>
+                                    </div>
+                                    <ul>
+                                        <?php foreach ($package['features'] as $feature): ?>
+                                            <li><?php echo htmlspecialchars($feature); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <a class="btn btn-outline-orange js-whatsapp-link" href="<?php echo htmlspecialchars($whatsappFallbackUrl); ?>" target="_blank" rel="noopener" data-wa-number="<?php echo htmlspecialchars($whatsappNumber); ?>" data-wa-message="<?php echo htmlspecialchars($whatsappMessage . 'Website package - ' . $package['name'] . ': '); ?>">Enquire package</a>
+                                </article>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
         <section class="section-pad bg-soft">
             <div class="container">
                 <div class="section-heading">

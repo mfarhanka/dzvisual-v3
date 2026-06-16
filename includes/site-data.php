@@ -27,6 +27,56 @@ $services = [
         'deliverables' => ['Responsive website design', 'Business profile and service pages', 'Enquiry forms and WhatsApp flows', 'Gallery, product, or order modules', 'Maintenance and content updates'],
         'bestFor' => ['Small business websites', 'Company profiles', 'Homestay websites', 'Product and service catalogues'],
         'image' => 'assets/img/dzvisual-web-design.png',
+        'packages' => [
+            [
+                'name' => 'Starter Website',
+                'price' => 'RM 1,500',
+                'summary' => 'A focused online presence for new businesses that need a clean profile and enquiry path.',
+                'features' => ['Up to 5 pages', 'Mobile responsive layout', 'WhatsApp enquiry button', 'Basic SEO setup'],
+            ],
+            [
+                'name' => 'Business Website',
+                'price' => 'RM 2,800',
+                'summary' => 'A stronger company website with clearer service pages, proof sections, and lead capture.',
+                'features' => ['Up to 10 pages', 'Service and portfolio sections', 'Enquiry form integration', 'Content update support'],
+            ],
+            [
+                'name' => 'Custom System',
+                'price' => 'RM 4,500+',
+                'summary' => 'Custom modules for businesses that need product, booking, ordering, or internal workflows.',
+                'features' => ['Custom feature planning', 'Product, gallery, or order module', 'Admin management flow', 'Launch and handover support'],
+            ],
+        ],
+        'projects' => [
+            [
+                'label' => 'Website Homestay',
+                'category' => 'Homestay Website',
+                'copy' => 'Booking-focused homestay website project in Cyberjaya.',
+                'image' => 'assets/img/project-homestay.jpg',
+                'url' => 'http://homestay.dzvisual.my/',
+            ],
+            [
+                'label' => 'Website for FTSDeaf',
+                'category' => 'Association Website',
+                'copy' => 'Federal Territory Sport Deaf Association website.',
+                'image' => 'assets/img/project-ftsdeaf.jpg',
+                'url' => 'http://ftsdeaf.org.my/',
+            ],
+            [
+                'label' => 'Website Coconet',
+                'category' => 'Company Profile',
+                'copy' => 'Company profile website design project.',
+                'image' => 'assets/img/project-coconet.jpg',
+                'url' => 'http://www.coconet.com.my/',
+            ],
+            [
+                'label' => 'App e-kupon',
+                'category' => 'Programming',
+                'copy' => 'Custom e-kupon application programming project.',
+                'image' => 'assets/img/project-ekupon.jpg',
+                'url' => 'https://play.google.com/store/apps/details?id=com.vnet.ekupon01',
+            ],
+        ],
     ],
     [
         'slug' => 'homestay-management',
