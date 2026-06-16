@@ -1,7 +1,7 @@
 <?php
 $brand = [
     'name' => 'DzVisual Network',
-    'tagline' => 'Digital, hospitality, advertising, and visual production services for growing local businesses.',
+    'tagline' => 'Website design, programming, hospitality, advertising, and visual production services for growing local businesses.',
     'phone' => '+60 10-774 4530',
     'email' => 'hello@dzvisual.my',
     'location' => 'Malaysia',
@@ -10,13 +10,16 @@ $brand = [
 $whatsappNumber = '60107744530';
 $whatsappMessage = 'Hi DzVisual Network, I clicked WhatsApp from this page and would like to enquire: ';
 $whatsappFallbackUrl = 'https://wa.me/' . $whatsappNumber . '?text=' . rawurlencode($whatsappMessage . 'https://dzvisual.my/');
+$siteUrl = 'https://dzvisual.my/';
+$siteDescription = 'DzVisual Network provides website design, programming, homestay operator support, advertising, and visual production for businesses in Malaysia.';
+$siteImage = $siteUrl . 'assets/img/dzvisual-og.jpg';
 
 $services = [
     [
         'title' => 'Website Services',
         'icon' => 'bi-window-sidebar',
-        'copy' => 'Business websites, landing pages, booking pages, profile pages, and maintenance support.',
-        'points' => ['Website design', 'Landing pages', 'Monthly updates'],
+        'copy' => 'Web design, web development, enquiry forms, galleries, product modules, order modules, and maintenance support.',
+        'points' => ['Website design', 'Online enquiry', 'Custom modules'],
     ],
     [
         'title' => 'Homestay Operator',
@@ -39,9 +42,34 @@ $services = [
 ];
 
 $portfolio = [
-    ['label' => 'Business Launch Kit', 'category' => 'Website + Visuals', 'image' => 'assets/img/portfolio-event.svg'],
-    ['label' => 'Cafe Growth Campaign', 'category' => 'Ads + Content', 'image' => 'assets/img/portfolio-food.svg'],
-    ['label' => 'Stay Listing Upgrade', 'category' => 'Homestay Support', 'image' => 'assets/img/portfolio-wedding.svg'],
+    [
+        'label' => 'Website Homestay',
+        'category' => 'Web Design',
+        'copy' => 'Website homestay project in Cyberjaya.',
+        'image' => 'assets/img/project-homestay.jpg',
+        'url' => 'http://homestay.dzvisual.my/',
+    ],
+    [
+        'label' => 'Website for FTSDeaf',
+        'category' => 'Web Design',
+        'copy' => 'Federal Territory Sport Deaf Association website.',
+        'image' => 'assets/img/project-ftsdeaf.jpg',
+        'url' => 'http://ftsdeaf.org.my/',
+    ],
+    [
+        'label' => 'Website Coconet',
+        'category' => 'Company Profile',
+        'copy' => 'Company profile website design project.',
+        'image' => 'assets/img/project-coconet.jpg',
+        'url' => 'http://www.coconet.com.my/',
+    ],
+    [
+        'label' => 'App e-kupon',
+        'category' => 'Programming',
+        'copy' => 'E-kupon application project.',
+        'image' => 'assets/img/project-ekupon.jpg',
+        'url' => 'https://play.google.com/store/apps/details?id=com.vnet.ekupon01',
+    ],
 ];
 
 $solutions = [
@@ -67,30 +95,75 @@ $process = [
 ];
 
 $stats = [
-    ['value' => '120+', 'label' => 'Projects delivered'],
+    ['value' => '50+', 'label' => 'Completed website design & programming projects'],
     ['value' => '4', 'label' => 'Service divisions'],
-    ['value' => '48h', 'label' => 'First response target'],
+    ['value' => '10+', 'label' => 'Years of experience'],
 ];
 
 $audiences = ['Homestay owners', 'Small businesses', 'Event organizers', 'Cafes and restaurants', 'Product sellers', 'Local brands'];
+
+$structuredData = [
+    '@context' => 'https://schema.org',
+    '@type' => ['Organization', 'LocalBusiness'],
+    '@id' => $siteUrl . '#organization',
+    'name' => $brand['name'],
+    'url' => $siteUrl,
+    'logo' => $siteUrl . 'assets/img/dzvisual-logo-live.png',
+    'image' => $siteImage,
+    'description' => $siteDescription,
+    'email' => $brand['email'],
+    'telephone' => $brand['phone'],
+    'areaServed' => [
+        '@type' => 'Country',
+        'name' => $brand['location'],
+    ],
+    'sameAs' => [
+        'https://wa.me/' . $whatsappNumber,
+    ],
+    'makesOffer' => array_map(function ($service) {
+        return [
+            '@type' => 'Offer',
+            'itemOffered' => [
+                '@type' => 'Service',
+                'name' => $service['title'],
+                'description' => $service['copy'],
+            ],
+        ];
+    }, $services),
+];
 ?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="DzVisual Network provides website services, homestay operator support, advertising, and visual production for businesses in Malaysia.">
+    <meta name="description" content="<?php echo htmlspecialchars($siteDescription); ?>">
+    <meta name="robots" content="index, follow">
     <title><?php echo htmlspecialchars($brand['name']); ?> | Website, Homestay, Ads & Visual Services Malaysia</title>
+    <link rel="canonical" href="<?php echo htmlspecialchars($siteUrl); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<?php echo htmlspecialchars($brand['name']); ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars($brand['name']); ?> | Website, Homestay, Ads & Visual Services Malaysia">
+    <meta property="og:description" content="<?php echo htmlspecialchars($siteDescription); ?>">
+    <meta property="og:url" content="<?php echo htmlspecialchars($siteUrl); ?>">
+    <meta property="og:image" content="<?php echo htmlspecialchars($siteImage); ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($brand['name']); ?> | Website, Homestay, Ads & Visual Services Malaysia">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($siteDescription); ?>">
+    <meta name="twitter:image" content="<?php echo htmlspecialchars($siteImage); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" href="assets/img/dzvisual-logo.jpg">
+    <link rel="icon" href="assets/img/dzvisual-logo-live.png">
     <link href="assets/css/style.css" rel="stylesheet">
+    <script type="application/ld+json">
+        <?php echo json_encode($structuredData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?>
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#top">
-                <img class="brand-logo" src="assets/img/dzvisual-logo.jpg" alt="<?php echo htmlspecialchars($brand['name']); ?>">
+                <img class="brand-logo" src="assets/img/dzvisual-logo-live.png" alt="<?php echo htmlspecialchars($brand['name']); ?>">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -128,7 +201,7 @@ $audiences = ['Homestay owners', 'Small businesses', 'Event organizers', 'Cafes 
                     </div>
                     <div class="col-lg-6">
                         <div class="hero-media">
-                            <img src="assets/img/hero-studio.svg" alt="DzVisual Network production and business services" class="img-fluid">
+                            <img src="assets/img/dzvisual-web-design.png" alt="DzVisual Network website design and programming services" class="img-fluid" width="800" height="492">
                         </div>
                     </div>
                 </div>
@@ -210,13 +283,16 @@ $audiences = ['Homestay owners', 'Small businesses', 'Event organizers', 'Cafes 
                 </div>
                 <div class="row g-4">
                     <?php foreach ($portfolio as $item): ?>
-                        <div class="col-md-4">
+                        <div class="col-md-6 col-xl-3">
                             <article class="work-card">
-                                <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['label']); ?>">
-                                <div class="work-card-body">
-                                    <span><?php echo htmlspecialchars($item['category']); ?></span>
-                                    <h3><?php echo htmlspecialchars($item['label']); ?></h3>
-                                </div>
+                                <a href="<?php echo htmlspecialchars($item['url']); ?>" target="_blank" rel="noopener">
+                                    <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['label']); ?> by DzVisual Network" width="1366" height="651">
+                                    <div class="work-card-body">
+                                        <span><?php echo htmlspecialchars($item['category']); ?></span>
+                                        <h3><?php echo htmlspecialchars($item['label']); ?></h3>
+                                        <p><?php echo htmlspecialchars($item['copy']); ?></p>
+                                    </div>
+                                </a>
                             </article>
                         </div>
                     <?php endforeach; ?>

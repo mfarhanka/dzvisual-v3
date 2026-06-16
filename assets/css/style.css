@@ -91,6 +91,18 @@ body {
     width: 100%;
 }
 
+.work-card a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+.work-card img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+}
+
 .hero-service-strip {
     display: flex;
     flex-wrap: wrap;
@@ -181,6 +193,7 @@ body {
 }
 
 .service-card p,
+.work-card p,
 .process-item p,
 .solution-item p {
     color: var(--dz-muted);
