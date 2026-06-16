@@ -1,106 +1,5 @@
 <?php
-$brand = [
-    'name' => 'DzVisual Network',
-    'tagline' => 'Website design, programming, hospitality, advertising, and visual production services for growing local businesses.',
-    'phone' => '+60 10-774 4530',
-    'email' => 'hello@dzvisual.my',
-    'location' => 'Malaysia',
-];
-
-$whatsappNumber = '60107744530';
-$whatsappMessage = 'Hi DzVisual Network, I clicked WhatsApp from this page and would like to enquire: ';
-$whatsappFallbackUrl = 'https://wa.me/' . $whatsappNumber . '?text=' . rawurlencode($whatsappMessage . 'https://dzvisual.my/');
-$siteUrl = 'https://dzvisual.my/';
-$siteDescription = 'DzVisual Network provides website design, programming, homestay operator support, advertising, and visual production for businesses in Malaysia.';
-$siteImage = $siteUrl . 'assets/img/dzvisual-og.jpg';
-
-$services = [
-    [
-        'title' => 'Website Services',
-        'icon' => 'bi-window-sidebar',
-        'copy' => 'Web design, web development, enquiry forms, galleries, product modules, order modules, and maintenance support.',
-        'points' => ['Website design', 'Online enquiry', 'Custom modules'],
-    ],
-    [
-        'title' => 'Homestay Operator',
-        'icon' => 'bi-house-heart',
-        'copy' => 'Setup, presentation, guest communication, listing support, and content for homestay owners.',
-        'points' => ['Listing setup', 'Guest workflow', 'Property content'],
-    ],
-    [
-        'title' => 'Advertising Agency',
-        'icon' => 'bi-badge-ad',
-        'copy' => 'Campaign planning, ad creatives, lead generation funnels, and performance-focused promotions.',
-        'points' => ['Meta ads', 'TikTok ads', 'Lead generation'],
-    ],
-    [
-        'title' => 'Photo & Video',
-        'icon' => 'bi-camera-reels',
-        'copy' => 'Event coverage, commercial visuals, reels, product shoots, food content, and brand story films.',
-        'points' => ['Event coverage', 'Commercial shoot', 'Social content'],
-    ],
-];
-
-$portfolio = [
-    [
-        'label' => 'Website Homestay',
-        'category' => 'Web Design',
-        'copy' => 'Website homestay project in Cyberjaya.',
-        'image' => 'assets/img/project-homestay.jpg',
-        'url' => 'http://homestay.dzvisual.my/',
-    ],
-    [
-        'label' => 'Website for FTSDeaf',
-        'category' => 'Web Design',
-        'copy' => 'Federal Territory Sport Deaf Association website.',
-        'image' => 'assets/img/project-ftsdeaf.jpg',
-        'url' => 'http://ftsdeaf.org.my/',
-    ],
-    [
-        'label' => 'Website Coconet',
-        'category' => 'Company Profile',
-        'copy' => 'Company profile website design project.',
-        'image' => 'assets/img/project-coconet.jpg',
-        'url' => 'http://www.coconet.com.my/',
-    ],
-    [
-        'label' => 'App e-kupon',
-        'category' => 'Programming',
-        'copy' => 'E-kupon application project.',
-        'image' => 'assets/img/project-ekupon.jpg',
-        'url' => 'https://play.google.com/store/apps/details?id=com.vnet.ekupon01',
-    ],
-];
-
-$solutions = [
-    [
-        'title' => 'Launch My Business Online',
-        'copy' => 'Website, business profile, visuals, and enquiry flow for a cleaner first impression.',
-    ],
-    [
-        'title' => 'Promote My Homestay',
-        'copy' => 'Property content, listing improvement, guest journey, and booking-focused promotion.',
-    ],
-    [
-        'title' => 'Monthly Content & Ads',
-        'copy' => 'Creative production and paid promotion support for consistent online visibility.',
-    ],
-];
-
-$process = [
-    'Consult' => 'We clarify your business goal, current assets, timeline, and the service mix you need.',
-    'Plan' => 'We map the website, content, ads, or homestay workflow into a practical action plan.',
-    'Build' => 'Our team produces the visuals, pages, listings, campaigns, and supporting materials.',
-    'Launch' => 'You receive ready-to-use files, pages, campaign assets, or operational handover support.',
-];
-
-$stats = [
-    ['value' => '50+', 'label' => 'Completed website design & programming projects'],
-    ['value' => '4', 'label' => 'Service divisions'],
-    ['value' => '10+', 'label' => 'Years of experience'],
-];
-
-$audiences = ['Homestay owners', 'Small businesses', 'Event organizers', 'Cafes and restaurants', 'Product sellers', 'Local brands'];
+require __DIR__ . '/includes/site-data.php';
 
 $structuredData = [
     '@context' => 'https://schema.org',
@@ -239,6 +138,7 @@ $structuredData = [
                                         <li><?php echo htmlspecialchars($point); ?></li>
                                     <?php endforeach; ?>
                                 </ul>
+                                <a class="service-card-link" href="<?php echo htmlspecialchars($service['url']); ?>">View service</a>
                             </article>
                         </div>
                     <?php endforeach; ?>

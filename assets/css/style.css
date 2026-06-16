@@ -226,6 +226,70 @@ body {
     width: .45rem;
 }
 
+.service-card-link {
+    color: var(--dz-orange-dark);
+    display: inline-flex;
+    font-weight: 800;
+    margin-top: auto;
+    padding-top: 1rem;
+    text-decoration: none;
+}
+
+.service-card-link:hover,
+.service-card-link:focus {
+    color: var(--dz-teal);
+}
+
+.service-hero {
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, .96) 0%, rgba(255, 255, 255, .9) 54%, rgba(248, 250, 252, .82) 100%),
+        linear-gradient(135deg, rgba(15, 118, 110, .14), rgba(249, 115, 22, .12));
+}
+
+.service-detail-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.service-detail-item {
+    align-items: center;
+    border-bottom: 1px solid var(--dz-line);
+    display: flex;
+    gap: .85rem;
+    padding: 0 0 1rem;
+}
+
+.service-detail-item i {
+    color: var(--dz-teal);
+    font-size: 1.25rem;
+}
+
+.service-detail-item span {
+    color: #343841;
+    font-weight: 700;
+}
+
+.service-side-panel {
+    background: #fff;
+    border: 1px solid var(--dz-line);
+    border-radius: 8px;
+    box-shadow: 0 1rem 2.5rem rgba(17, 24, 39, .055);
+    padding: 1.5rem;
+}
+
+.service-side-panel ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+.service-side-panel li {
+    border-top: 1px solid var(--dz-line);
+    color: #343841;
+    font-weight: 700;
+    padding: .85rem 0;
+}
+
 .bg-soft {
     background: var(--dz-soft);
 }
