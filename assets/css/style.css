@@ -1,0 +1,250 @@
+:root {
+    --dz-orange: #f97316;
+    --dz-orange-dark: #c2410c;
+    --dz-ink: #171717;
+    --dz-muted: #6b7280;
+    --dz-soft: #fff7ed;
+    --dz-line: #fed7aa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--dz-ink);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    --bs-navbar-padding-y: .85rem;
+}
+
+.brand-mark {
+    align-items: center;
+    background: var(--dz-orange);
+    border-radius: 8px;
+    color: #fff;
+    display: inline-flex;
+    font-size: .85rem;
+    height: 2.25rem;
+    justify-content: center;
+    letter-spacing: 0;
+    width: 2.25rem;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--dz-orange-dark);
+}
+
+.btn-orange {
+    --bs-btn-bg: var(--dz-orange);
+    --bs-btn-border-color: var(--dz-orange);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-bg: var(--dz-orange-dark);
+    --bs-btn-hover-border-color: var(--dz-orange-dark);
+    --bs-btn-hover-color: #fff;
+    font-weight: 700;
+}
+
+.btn-outline-orange {
+    --bs-btn-border-color: var(--dz-orange);
+    --bs-btn-color: var(--dz-orange-dark);
+    --bs-btn-hover-bg: var(--dz-orange);
+    --bs-btn-hover-border-color: var(--dz-orange);
+    --bs-btn-hover-color: #fff;
+    font-weight: 700;
+}
+
+.hero-section {
+    background:
+        linear-gradient(115deg, rgba(255, 247, 237, .95) 0%, rgba(255, 255, 255, .98) 48%, rgba(255, 237, 213, .86) 100%);
+    padding: 5.5rem 0 4.5rem;
+}
+
+.eyebrow {
+    color: var(--dz-orange-dark);
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.hero-media {
+    background: #fff;
+    border: 1px solid var(--dz-line);
+    border-radius: 8px;
+    box-shadow: 0 1.5rem 4rem rgba(194, 65, 12, .14);
+    overflow: hidden;
+}
+
+.hero-media img,
+.work-card img {
+    display: block;
+    width: 100%;
+}
+
+.stats-band {
+    background: var(--dz-orange);
+    color: #fff;
+}
+
+.stats-band strong {
+    display: block;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1;
+}
+
+.stats-band span {
+    font-weight: 600;
+    opacity: .9;
+}
+
+.section-pad {
+    padding: 5rem 0;
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+    max-width: 42rem;
+}
+
+.section-heading h2,
+.section-title,
+.contact-section h2 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.08;
+    margin-top: .75rem;
+}
+
+.service-card,
+.work-card,
+.contact-form {
+    background: #fff;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 1rem 2.5rem rgba(17, 24, 39, .06);
+}
+
+.service-card {
+    padding: 1.5rem;
+}
+
+.service-card i {
+    align-items: center;
+    background: var(--dz-soft);
+    border-radius: 8px;
+    color: var(--dz-orange-dark);
+    display: inline-flex;
+    font-size: 1.5rem;
+    height: 3rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 3rem;
+}
+
+.service-card h3,
+.work-card h3,
+.process-item h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.service-card p,
+.process-item p {
+    color: var(--dz-muted);
+    margin-bottom: 0;
+}
+
+.bg-soft {
+    background: var(--dz-soft);
+}
+
+.work-card {
+    overflow: hidden;
+}
+
+.work-card-body {
+    padding: 1.25rem;
+}
+
+.work-card-body span {
+    color: var(--dz-orange-dark);
+    display: block;
+    font-size: .82rem;
+    font-weight: 800;
+    margin-bottom: .35rem;
+    text-transform: uppercase;
+}
+
+.process-list {
+    border-top: 1px solid #e5e7eb;
+}
+
+.process-item {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 4rem 1fr;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.process-item > span {
+    color: var(--dz-orange);
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.contact-section {
+    background: #111;
+    color: #fff;
+}
+
+.contact-section p {
+    color: rgba(255, 255, 255, .78);
+}
+
+.contact-form {
+    padding: 1.5rem;
+}
+
+.contact-form .form-label {
+    color: #333;
+    font-weight: 700;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--dz-orange);
+    box-shadow: 0 0 0 .25rem rgba(249, 115, 22, .18);
+}
+
+footer {
+    color: var(--dz-muted);
+    font-size: .95rem;
+}
+
+@media (max-width: 767.98px) {
+    .hero-section,
+    .section-pad {
+        padding: 3.5rem 0;
+    }
+
+    .row.g-5 {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    .process-item {
+        grid-template-columns: 1fr;
+    }
+}

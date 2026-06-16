@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Food and cafe campaign visual">
+  <rect width="720" height="520" fill="#fff7ed"/>
+  <circle cx="360" cy="258" r="170" fill="#ffffff" stroke="#fdba74" stroke-width="10"/>
+  <circle cx="360" cy="258" r="118" fill="#f97316"/>
+  <circle cx="314" cy="224" r="26" fill="#fed7aa"/>
+  <circle cx="398" cy="218" r="30" fill="#ffedd5"/>
+  <circle cx="410" cy="302" r="24" fill="#fed7aa"/>
+  <rect x="122" y="102" width="104" height="274" rx="52" fill="#111827"/>
+  <rect x="506" y="118" width="92" height="256" rx="46" fill="#fb923c"/>
+  <rect x="172" y="416" width="376" height="26" rx="13" fill="#9a3412"/>
+</svg>

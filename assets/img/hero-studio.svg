@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Production studio scene</title>
+  <desc id="desc">A warm orange and white studio setup with camera, light, and editing preview.</desc>
+  <rect width="900" height="620" fill="#fff7ed"/>
+  <circle cx="720" cy="120" r="96" fill="#fed7aa"/>
+  <rect x="88" y="94" width="560" height="352" rx="28" fill="#ffffff" stroke="#fdba74" stroke-width="5"/>
+  <rect x="130" y="138" width="478" height="248" rx="18" fill="#111827"/>
+  <path d="M130 318l118-92 84 66 74-48 202 142H130z" fill="#f97316"/>
+  <circle cx="492" cy="204" r="44" fill="#fff7ed"/>
+  <rect x="244" y="446" width="248" height="34" rx="17" fill="#fdba74"/>
+  <rect x="322" y="480" width="90" height="54" rx="10" fill="#fb923c"/>
+  <rect x="222" y="534" width="290" height="26" rx="13" fill="#9a3412"/>
+  <g transform="translate(608 272)">
+    <rect x="0" y="62" width="190" height="118" rx="22" fill="#1f2937"/>
+    <circle cx="68" cy="121" r="44" fill="#0f172a"/>
+    <circle cx="68" cy="121" r="25" fill="#fb923c"/>
+    <rect x="132" y="34" width="72" height="44" rx="12" fill="#f97316"/>
+    <rect x="42" y="0" width="88" height="74" rx="16" fill="#374151"/>
+    <path d="M95 180l-18 102M95 180l58 102M95 180l-76 102" stroke="#7c2d12" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(100 458)">
+    <rect x="0" y="0" width="118" height="22" rx="11" fill="#f97316"/>
+    <rect x="18" y="34" width="82" height="18" rx="9" fill="#fb923c"/>
+    <rect x="34" y="66" width="50" height="18" rx="9" fill="#fdba74"/>
+  </g>
+</svg>

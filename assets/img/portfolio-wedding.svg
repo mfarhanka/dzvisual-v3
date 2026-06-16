@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Wedding highlight visual">
+  <rect width="720" height="520" fill="#fff7ed"/>
+  <path d="M110 394c86-136 150-204 250-204s164 68 250 204z" fill="#ffffff" stroke="#fdba74" stroke-width="8"/>
+  <circle cx="304" cy="176" r="58" fill="#fed7aa"/>
+  <circle cx="418" cy="176" r="58" fill="#fb923c"/>
+  <path d="M282 256h156l66 154H216z" fill="#f97316"/>
+  <path d="M360 118l28 52h-56z" fill="#ffffff"/>
+  <circle cx="360" cy="292" r="28" fill="#fff7ed"/>
+  <rect x="178" y="428" width="364" height="24" rx="12" fill="#9a3412"/>
+</svg>

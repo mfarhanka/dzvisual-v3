@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Corporate launch event visual">
+  <rect width="720" height="520" fill="#ffffff"/>
+  <rect x="0" y="0" width="720" height="520" fill="#fff7ed"/>
+  <rect x="72" y="78" width="576" height="324" rx="28" fill="#111827"/>
+  <rect x="118" y="120" width="220" height="132" rx="16" fill="#f97316"/>
+  <rect x="372" y="120" width="230" height="132" rx="16" fill="#fdba74"/>
+  <circle cx="192" cy="332" r="34" fill="#fed7aa"/>
+  <circle cx="276" cy="332" r="34" fill="#fb923c"/>
+  <circle cx="360" cy="332" r="34" fill="#fed7aa"/>
+  <circle cx="444" cy="332" r="34" fill="#fb923c"/>
+  <circle cx="528" cy="332" r="34" fill="#fed7aa"/>
+  <rect x="196" y="432" width="328" height="26" rx="13" fill="#c2410c"/>
+</svg>
